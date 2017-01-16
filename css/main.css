@@ -11,7 +11,8 @@ body {
   margin: 0; }
   @media screen and (min-width: 768px) {
     body {
-      font-size: 18px; } }
+      font-size: 18px;
+      background-size: cover; } }
 
 h1, h2 {
   font-family: 'Arvo', serif;
@@ -62,7 +63,7 @@ button {
     list-style: none; }
 
 #clear {
-  background-color: #DC143C;
-  color: #E9E9E9; }
+  color: #E9E9E9;
+  background-color: #DC143C; }
 
 /*# sourceMappingURL=main.css.map */
