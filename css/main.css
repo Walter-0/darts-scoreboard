@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dartboard.jpg") no-repeat center/auto 100%;
+  height: 97vh;
+  text-align: center;
+  margin: 0; }
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 18px; } }
+
+h1, h2 {
+  font-family: 'Arvo', serif;
+  text-align: center;
+  color: #E9E9E9;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.title {
+  font-size: 60px; }
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 80px; } }
+
+.subtitle {
+  font-size: 30px; }
+  @media screen and (min-width: 768px) {
+    .subtitle {
+      font-size: 36px; } }
+
+.input-field {
+  font-size: 24px;
+  color: #E9E9E9;
+  border: 2px solid #E9E9E9;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5em;
+  width: 15rem;
+  margin-bottom: 1rem; }
+
+button {
+  border: none;
+  width: 10rem;
+  padding: 0.5em;
+  font-size: 16px; }
+
+#add {
+  color: #E9E9E9;
+  background-color: #089400; }
+
+#rankings-list {
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px; }
+  #rankings-list > li {
+    color: #E9E9E9;
+    list-style: none; }
+
+#clear {
+  background-color: #DC143C;
+  color: #E9E9E9; }
+
+/*# sourceMappingURL=main.css.map */

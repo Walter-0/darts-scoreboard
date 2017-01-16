@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8", :name => "viewport", :content => "width=device-width, initial-scale=1"}/
+    %title EverQuoteTest
+    %link{:href => "css/main.css", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Arvo:700|Roboto:300,400", :rel => "stylesheet"}/
+  %body
+    %h1.title DARTS
+    %h2.subtitle SCORECARD
+    %input.input-field{:type => "text", :placeholder => "Name, score"}/
+    %br/
+    %button#add Add To Rankings
+    %ul#rankings-list
+    %button#clear Clear Rankings
+
+    %script{:src => "js/main.js"}
