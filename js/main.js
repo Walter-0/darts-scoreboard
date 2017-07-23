@@ -26,12 +26,16 @@ function addPlayer () {
     for (let i = 0; i < players.length; i++) {
       if (players[i].name === name) {
         players[i].score = score
+        saveLocalStorage(name, score, i)
         return renderHTML()
       }
     }
+
+    saveLocalStorage(name, score, players.length)
     players.push(newPlayer)
     return renderHTML()
   } else {
+    saveLocalStorage(name, score, players.length)
     players.push(newPlayer)
     return renderHTML()
   }
@@ -67,10 +71,26 @@ function renderHTML () {
 function clearPlayers () {
   if (confirm('Are you sure? This will delete all rankings.')) {
     players = []
+    localStorage.clear()
     renderHTML()
   } else {
     return false
   }
+}
+
+function saveLocalStorage (name, score, index) {
+  localStorage.setItem(`name-${index}`, name)
+  localStorage.setItem(`score-${index}`, score)
+}
+
+function loadLocalStorage () {
+  for (var i = 0; i < window.localStorage.length / 2; i++) {
+    let name = localStorage.getItem(`name-${i}`)
+    let score = localStorage.getItem(`score-${i}`)
+    let newPlayer = new Player(name, score)
+    players.push(newPlayer)
+  }
+  renderHTML()
 }
 
 clearButton.addEventListener('click', clearPlayers)
@@ -86,3 +106,5 @@ document.addEventListener('keydown', function (event) {
     input.value = ''
   }
 })
+
+loadLocalStorage()
