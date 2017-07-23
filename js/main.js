@@ -50,9 +50,10 @@ function renderHTML () {
 
       if (index >= 2) {
         if (players[index - 2].score === player.score) {
-          console.log("there's a tie between " + players[index - 2].name + ' and ' + player.name)
           numTies++
           index -= numTies
+        } else {
+          numTies = 0
         }
       }
 
